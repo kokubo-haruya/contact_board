@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Memomon_created by Azupo</h1>
-<br><br><br>
+<h1>けいあずのお知らせ板</h1>
+<br><br>
 
 <table>
   <thead>
@@ -21,13 +21,8 @@
         <td><%= memo.memo %></td>
         <td><%= memo.name %></td>
         <td><%= link_to 'Show', memo %></td>
-        <td><%= link_to 'Edit', edit_memo_path(memo) %></td>
-        <td><%= link_to 'Destroy', memo, method: :delete, data: { confirm: 'You cant recovery this,are you OK?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
 <br><br>
-
-<%= link_to 'New Memo', new_memo_path %>
