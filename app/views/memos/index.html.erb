@@ -19,7 +19,7 @@
     <% @memos.each do |memo,key| %>
       <tr>
         <td><%= memo.title %></td>
-        <td><%= memo.memo %></td>
+        <td><%= simple_format(memo.memo) %></td>
         <td><%= memo.name %></td>
         <td><%= Time.at(key.to_i) %></td>
         <td><%= link_to 'Show', memo %></td>
