@@ -1,20 +1,6 @@
 class MemosController < ApplicationController
   before_action :set_memo, only: [:show, :edit, :update, :destroy]
 
-  def initialize
-    super
-    begin
-      @memos =JSON.parsa(File.read("data.txt"))
-      rescue
-        @memos = Hash.new
-    end
-    @memos.each do |memo,key|
-      if Time.now.to_i - key.to_i > 24*60*60 then
-      @memos.delete(key)
-      end
-    end
-  end
-
   # GET /memos
   # GET /memos.json
   def index
@@ -83,6 +69,6 @@ class MemosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def memo_params
-      params.require(:memo).permit(:title, :memo, :name)
+      params.require(:memo).permit(:title, :memo, :name, :time)
     end
 end

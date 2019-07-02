@@ -15,6 +15,13 @@
   <%= @memo.name %>
 </p>
 
-<%= link_to 'Edit', edit_memo_path(@memo) %> |
-<%= link_to 'Destroy', @memo, method: :delete, data: { confirm: 'You cant recovery this again,are you OK?' } %> |
+<p>
+  <strong>Posting_Date:</strong>
+  <%= @memo.time %>
+</p>
+<p>
+  <strong>Control_Number:</strong>
+  <%= @memo.id %>
+</p>
+
 <%= link_to 'Back', memos_path %>

@@ -3,4 +3,5 @@
 <%= render 'form', memo: @memo %>
 
 <%= link_to 'Show', @memo %> |
+<%= link_to 'Destroy', @memo, method: :delete, data: { confirm: 'You cant recovery this again,are you OK?' } %> |
 <%= link_to 'Back', memos_path %>
