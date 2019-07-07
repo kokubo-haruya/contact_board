@@ -7,6 +7,10 @@ class MemosController < ApplicationController
     @memos = Memo.all
   end
 
+  def eng
+    @memos = Memo.all
+  end
+
   # GET /memos/1
   # GET /memos/1.json
   def show

@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Keiazu's information board</h1>
+<br><br>
+<p>this page is a message board for keiazu!</p>
+<a href="https://twitter.com/az2en"target="_blank">Twitter english account(@az2en)</a>
+<a href="https://twitter.com/keyhal"target="_blank">Twitter private account(@keyhal)</a>
+<a href="https://twitcasting.tv/keyhal"target="_brank">Twicas</a>
+
+<br><br>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>information</th>
+      <th>user</th>
+      <th>day</th>
+      <th colspan="3"></th>
+
+  </thead>
+  
+
+  <tbody>
+    <% @memos.each do |memo| %>
+      <tr>
+        <td><%= memo.title %></td>
+        <td><%= simple_format(memo.memo) %></td>
+        <td><%= memo.name %></td>
+        <td><%= memo.time %></td>
+        <td><%= link_to 'details', memo %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br><br>
+<p>created by Ruby_on_Rails 5.2.3</p>
+<%= link_to 'link of japanese version!', memos_path %>
