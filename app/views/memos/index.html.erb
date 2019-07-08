@@ -1,20 +1,25 @@
 <p id="notice"><%= notice %></p>
 
 <h1>けいあずのお知らせ板</h1>
-<br><br>
+<br>
 <p>this page is a message board for keiazu!</p>
 <a href="https://twitter.com/k5azu"target="_blank">Twitterアカウント(@k5azu)</a>
 <a href="https://twitter.com/keyhal"target="_blank">Twitter鍵垢(@keyhal)</a>
 <a href="https://twitcasting.tv/keyhal"target="_brank">ツイキャス</a>
-
+<br>
+<a href="https://www.patreon.com/azupo"target="_brank">Patreon</a>
 <br><br>
 <table>
   <thead>
     <tr>
       <th>タイトル</th>
+      <th>　　　</th>
       <th>お知らせ</th>
+      <th>　　　</th>
       <th>投稿者</th>
+      <th>　　　</th>
       <th>投稿日</th>
+  
       <th colspan="3"></th>
 
   </thead>
@@ -24,8 +29,11 @@
     <% @memos.each do |memo| %>
       <tr>
         <td><%= memo.title %></td>
+        <th>　　　</th>
         <td><%= simple_format(memo.memo) %></td>
+        <th>　　　</th>
         <td><%= memo.name %></td>
+        <th>　　　</th>
         <td><%= memo.time %></td>
         <td><%= link_to '詳細', memo %></td>
       </tr>
