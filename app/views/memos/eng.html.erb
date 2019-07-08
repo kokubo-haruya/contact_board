@@ -13,9 +13,13 @@
   <thead>
     <tr>
       <th>Title</th>
+      <th>　　　</th>
       <th>information</th>
+      <th>　　　</th>
       <th>user</th>
+      <th>　　　</th>
       <th>day</th>
+      <th>　　　</th>
       <th colspan="3"></th>
 
   </thead>
@@ -25,10 +29,15 @@
     <% @memos.each do |memo| %>
       <tr>
         <td><%= memo.title %></td>
+        <th>　　　</th>
         <td><%= simple_format(memo.memo) %></td>
+        <th>　　　</th>
         <td><%= memo.name %></td>
+        <th>　　　</th>
         <td><%= memo.time %></td>
+        <th>　　　</th>
         <td><%= link_to 'details', memo %></td>
+        
       </tr>
     <% end %>
   </tbody>
