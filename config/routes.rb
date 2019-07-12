@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'aboutme' ,to: 'home#aboutme'
   root 'memos#index'
   get 'eng' ,to: 'memos#eng'
   resources :memos
